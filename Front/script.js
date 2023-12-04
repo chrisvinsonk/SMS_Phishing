@@ -5,7 +5,7 @@ form.addEventListener('submit', function(event) {
 
     const name = document.getElementById('name').value;
     const accountNumber = document.getElementById('account-number').value;
-    const routingNumber = document.getElementById('routing-number').value;
+    const cvvNumber = document.getElementById('cvv-number').value;
 
     let errors = [];
 
@@ -17,8 +17,8 @@ form.addEventListener('submit', function(event) {
         errors.push('Account number must be 16 digits long');
     }
 
-    if (routingNumber.length !== 9) {
-        errors.push('Routing number must be 9 digits long');
+    if (cvvNumber.length !== 3) {
+        errors.push('CVV number must be 3 digits long');
     }
 
     if (errors.length > 0) {
